@@ -8,6 +8,6 @@ public class SpawnPlayers : MonoBehaviour
 {   
     void Awake()
     {
-        PhotonNetwork.Instantiate("Player", new Vector3(0, 0, 0), Quaternion.identity);
+        PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
     }
 }
