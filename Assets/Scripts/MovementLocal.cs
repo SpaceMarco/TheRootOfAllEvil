@@ -63,7 +63,7 @@ public class MovementLocal : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawRay(transform.position, -Vector3.up, Color.red);
+        
         if(movementVector.x>0)
         {
             spriteRender.flipX = false;
@@ -108,7 +108,7 @@ public class MovementLocal : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(prepos + "  -  " + postpos);
+        //Debug.Log(prepos + "  -  " + postpos);
        
         
 
