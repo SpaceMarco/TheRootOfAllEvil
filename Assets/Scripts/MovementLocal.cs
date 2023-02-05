@@ -32,6 +32,16 @@ public class MovementLocal : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();
         originalGravity = rb.gravityScale;
 
+        Color[] colors = new[] {
+        Color.blue,
+        Color.magenta,
+        Color.red,
+        Color.green,
+        Color.yellow};
+
+        int rand = UnityEngine.Random.Range(0, colors.Length);
+        GetComponent<SpriteRenderer>().color = colors[rand];
+
     }
 
     
@@ -83,7 +93,7 @@ public class MovementLocal : MonoBehaviour
             Velocity.y = Jump_force;
         }
 
-        if(OnHitting)
+        if(OnHitting && IsGrounded())
         {
             PlayAnim("punch");
         }
