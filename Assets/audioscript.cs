@@ -18,7 +18,7 @@ public class audioscript : MonoBehaviour
     {
         if(!audio.isPlaying)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }

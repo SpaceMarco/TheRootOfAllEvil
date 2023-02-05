@@ -8,20 +8,9 @@ public class HealthSystem : MonoBehaviour
     [SerializeField]
     private Image healthBar;
     [SerializeField]
-    private TMP_Text healthText;
+    // private TMP_Text healthText;
     private float health = 100;
     [SerializeField]
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        healthText.text = health + "%";
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TakeDamage(20);
-        }
-    }
 
     public void TakeDamage(float damage)
     {
@@ -29,7 +18,7 @@ public class HealthSystem : MonoBehaviour
         healthBar.fillAmount = health / 100;
         if (health <= 0)
         {
-            //Loose Here
+            Destroy(gameObject);
         }
     }
     public void Heal(float heal)

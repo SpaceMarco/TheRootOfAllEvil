@@ -64,6 +64,7 @@ public class Combat : MonoBehaviour
                 {
                     target.GetComponent<Rigidbody2D>().AddForce(Vector2.left*PunchPower*2);
                     target.GetComponent<Rigidbody2D>().AddForce(Vector2.up*PunchPower*0.2f);
+                    target.GetComponent<HealthSystem>().TakeDamage(5);
 
                     Debug.Log("Colliding Left");
                 }
@@ -80,6 +81,7 @@ public class Combat : MonoBehaviour
                 {
                     target.GetComponent<Rigidbody2D>().AddForce(Vector2.right*PunchPower*2);
                     target.GetComponent<Rigidbody2D>().AddForce(Vector2.up*PunchPower*0.2f);
+                    target.GetComponent<HealthSystem>().TakeDamage(5);
                     Debug.Log("Colliding Left");
                 }
                 //  Debug.Log("Colliding Right");
