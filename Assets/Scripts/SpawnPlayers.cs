@@ -6,8 +6,9 @@ using Photon.Realtime;
 
 public class SpawnPlayers : MonoBehaviour
 {   
-    void Awake()
+    
+    public void OnSpawn(GameObject player)
     {
-        PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
+        
     }
 }
